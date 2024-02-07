@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "angular.json", "use": "@angular/cli:build" }
+  ],
+  "routes": [
+    { "src": "(.*)", "dest": "/index.html" }
+  ]
+}
