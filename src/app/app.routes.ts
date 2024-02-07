@@ -3,6 +3,5 @@ import {GamersoftnewsComponent} from "./layout/gamersoftnews/gamersoftnews.compo
 
 
 export const routes: Routes = [
-  {path: 'gamesoftnews', component: GamersoftnewsComponent},
-  {path: '', redirectTo: '/gamesoftnews', pathMatch: 'full'},
+  {path: '', component: GamersoftnewsComponent},
 ];
