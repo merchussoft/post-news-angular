@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {GamersoftnewsComponent} from "./layout/gamersoftnews/gamersoftnews.component";
 
 
