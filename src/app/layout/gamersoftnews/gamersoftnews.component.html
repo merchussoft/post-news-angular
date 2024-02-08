@@ -1,17 +1,11 @@
-<main>
+<main *ngFor="let gamernews of data_result.data">
   <a href="#">
     <section class="contenedor post-news">
-      <h1 class="titulo">titulo</h1>
+      <h1 class="titulo">{{gamernews.title}}</h1>
       <div class="contenedor-descriptions">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolores ea molestias officiis voluptatibus!
-          Beatae eos impedit neque rerum voluptate. A adipisci consequuntur dolorem, ducimus, eligendi hic ipsum libero
-          minus neque optio perferendis repellendus, tenetur veritatis? Adipisci alias aliquam at atque consequuntur
-          eos, est facere fuga fugiat illo incidunt ipsam maxime, minima minus, nam nemo nihil odio porro possimus quae
-          quisquam reiciendis repellendus rerum sequi tenetur ullam ut. Doloremque ducimus exercitationem in neque
-          praesentium reiciendis suscipit voluptatibus. Accusantium aspernatur, aut deleniti dolor dolore enim eum
-          facere fugiat id illo ipsam labore minima molestiae nostrum numquam quas, rerum sunt vel voluptates?</p>
+        <p>{{gamernews.description}}</p>
       </div>
-      <span class="created-date">Post news - 26 enero, 2024</span>
+      <span class="created-date">Post news - {{gamernews.created_at}}</span>
     </section>
   </a>
 </main>
