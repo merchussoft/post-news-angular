@@ -1,5 +1,5 @@
 <main *ngFor="let gamernews of data_result.data">
-  <a href="#">
+  <a [routerLink]="['/detailpost', gamernews.cod_news]">
     <section class="contenedor post-news">
       <h1 class="titulo">{{gamernews.title}}</h1>
       <div class="contenedor-descriptions">

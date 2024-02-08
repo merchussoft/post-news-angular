@@ -1,0 +1,11 @@
+<section class="contenedor post-one" *ngFor="let post_one of data_post_one">
+
+  <h1 class="titulo-post">{{ post_one.title }}</h1>
+  <span class="created-date-post">{{ post_one.created_at }}</span>
+  <div class="description-image">
+    <img src="{{post_one.url_img}}" alt="{{post_one.title}}" *ngIf="post_one.url_img !== null" width="100%">
+    <p>{{ post_one.description }}</p>
+  </div>
+  <p>{{ post_one.content }}</p>
+
+</section>

@@ -14,12 +14,14 @@ import { MenuHeaderComponent } from './layout/menu-header/menu-header.component'
 import { GamersoftnewsComponent } from './layout/gamersoftnews/gamersoftnews.component';
 
 import { NgxSpinnerModule} from 'ngx-spinner';
+import { DetailpostComponent } from './layout/detailpost/detailpost.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     MenuHeaderComponent,
-    GamersoftnewsComponent
+    GamersoftnewsComponent,
+    DetailpostComponent
   ],
   imports: [
     BrowserModule,
