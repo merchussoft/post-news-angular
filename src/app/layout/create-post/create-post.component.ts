@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {NgForm} from '@angular/forms';
 import {GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 @Component({
   selector: 'app-create-post',
@@ -10,16 +10,9 @@ import {NgxSpinnerService} from "ngx-spinner";
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent {
-
+  public Editor = ClassicEditor;
 
   constructor(private http: GamersoftnewsService, private spinner: NgxSpinnerService) {
-  }
-
-  public Editor = ClassicEditor;
-  config_ckeditor = {
-    simpleUpload: {
-      uploadUrl: 'http://127.0.0.1:9001/prueba'
-    }
   }
 
   form_gamerpostnews = {
