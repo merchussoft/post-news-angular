@@ -1,0 +1,8 @@
+<section class="contenedor">
+  <form #gamerpostnewsFrom="ngForm" (ngSubmit)="submitGamerPostNews(gamerpostnewsFrom)">
+    <input type="text" [(ngModel)]="form_gamerpostnews.title" name="title">
+    <input type="text" [(ngModel)]="form_gamerpostnews.description" name="description">
+    <ckeditor [editor]="Editor" [(ngModel)]="form_gamerpostnews.content" name="content"></ckeditor>
+    <button type="submit" class="btn btn-primary">guardar edicion</button>
+  </form>
+</section>

@@ -4,8 +4,7 @@
   <span class="created-date-post">{{ post_one.created_at }}</span>
   <div class="description-image">
     <img src="{{post_one.url_img}}" alt="{{post_one.title}}" *ngIf="post_one.url_img !== null" width="100%">
-    <p>{{ post_one.description }}</p>
   </div>
-  <p>{{ post_one.content }}</p>
+  <div [innerHTML]="post_one.content"></div>
 
 </section>

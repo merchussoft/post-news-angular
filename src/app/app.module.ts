@@ -14,21 +14,28 @@ import { MenuHeaderComponent } from './layout/menu-header/menu-header.component'
 import { GamersoftnewsComponent } from './layout/gamersoftnews/gamersoftnews.component';
 
 import { NgxSpinnerModule} from 'ngx-spinner';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 import { DetailpostComponent } from './layout/detailpost/detailpost.component';
+import { CreatePostComponent } from './layout/create-post/create-post.component';
+import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     MenuHeaderComponent,
     GamersoftnewsComponent,
-    DetailpostComponent
+    DetailpostComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CKEditorModule,
+    FormsModule
   ],
   providers: [
     GamersoftnewsService
