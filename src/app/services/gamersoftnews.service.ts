@@ -16,7 +16,6 @@ export class GamersoftnewsService {
       'Content-Type': 'application/json; charset=utf-8',
       'Access-Control-Allow-Origin': '*'
     })
-
   }
 
   traerDatos() {
@@ -29,6 +28,6 @@ export class GamersoftnewsService {
   }
 
   subirPost(submitGamerPostNew: {}): Observable<any> {
-    return this.http.post(`${this.url_api}/savenews`, submitGamerPostNew, {headers: this.headers_send});
+    return this.http.post(`${this.url_api}/savenews`, submitGamerPostNew, {headers: {'Access-Control-Allow-Origin': '*'}});
   }
 }
