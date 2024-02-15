@@ -19,6 +19,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { DetailpostComponent } from './layout/detailpost/detailpost.component';
 import { CreatePostComponent } from './layout/create-post/create-post.component';
 import {FormsModule} from "@angular/forms";
+
+import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import {FormsModule} from "@angular/forms";
     NgxSpinnerModule,
     BrowserAnimationsModule,
     CKEditorModule,
-    FormsModule
+    FormsModule,
+    MesAbreviadoPipe,
   ],
   providers: [
     GamersoftnewsService
