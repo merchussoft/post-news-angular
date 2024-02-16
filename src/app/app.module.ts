@@ -21,6 +21,7 @@ import { CreatePostComponent } from './layout/create-post/create-post.component'
 import {FormsModule} from "@angular/forms";
 
 import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
     CKEditorModule,
     FormsModule,
     MesAbreviadoPipe,
+    NgxPaginationModule
   ],
   providers: [
     GamersoftnewsService

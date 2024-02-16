@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,6 +10,8 @@ export class GamersoftnewsService {
 
   protected url_api: string = '';
   protected headers_send: any;
+
+
 
   constructor(private http: HttpClient) {
     this.url_api = 'https://apigamerpostnewspruebas.vercel.app/api/news';

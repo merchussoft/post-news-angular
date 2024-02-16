@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
+import {PaginationInstance} from "ngx-pagination";
+
 @Component({
   selector: 'app-gamersoftnews',
   templateUrl: './gamersoftnews.component.html',
@@ -9,6 +11,10 @@ import {NgxSpinnerService} from "ngx-spinner";
 export class GamersoftnewsComponent implements OnInit{
 
   data_result: any = []
+  paginacionConfig: PaginationInstance = {
+    itemsPerPage: 2,
+    currentPage: 1,
+  };
   constructor(
     private gsn: GamersoftnewsService,
     private spinner: NgxSpinnerService
