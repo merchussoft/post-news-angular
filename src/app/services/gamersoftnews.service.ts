@@ -14,7 +14,8 @@ export class GamersoftnewsService {
 
 
   constructor(private http: HttpClient) {
-    this.url_api = process.env.API_URL;
+    // @ts-ignore
+    this.url_api = window['API_URL'];
     this.headers_send = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
       'Access-Control-Allow-Origin': '*'
