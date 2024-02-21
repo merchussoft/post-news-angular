@@ -14,8 +14,7 @@ export class GamersoftnewsService {
 
 
   constructor(private http: HttpClient) {
-    // @ts-ignore
-    this.url_api = window['API_URL'];
+    this.url_api = 'https://apigamerpostnewspruebas.vercel.app/api/news';
     this.headers_send = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
       'Access-Control-Allow-Origin': '*'
