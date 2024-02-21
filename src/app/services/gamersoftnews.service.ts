@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {environment} from "../../environments/environment";
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class GamersoftnewsService {
 
 
   constructor(private http: HttpClient) {
-    this.url_api = 'https://apigamerpostnewspruebas.vercel.app/api/news';
+    this.url_api = environment.URL_API;
     this.headers_send = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
       'Access-Control-Allow-Origin': '*'
