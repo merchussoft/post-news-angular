@@ -12,7 +12,7 @@ export class GamersoftnewsComponent implements OnInit{
 
   data_result: any = []
   paginacionConfig: PaginationInstance = {
-    itemsPerPage: 2,
+    itemsPerPage: 10,
     currentPage: 1,
   };
   constructor(

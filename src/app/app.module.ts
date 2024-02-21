@@ -22,6 +22,7 @@ import {FormsModule} from "@angular/forms";
 
 import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginComponent } from './layout/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MenuHeaderComponent,
     GamersoftnewsComponent,
     DetailpostComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
