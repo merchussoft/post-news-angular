@@ -17,6 +17,7 @@ export class InvitameuncafebuttomComponent implements OnInit{
   loadEpaycoScript() {
     const buttom_script = document.createElement('script');
     buttom_script.src = 'https://checkout.epayco.co/checkout.js';
+    buttom_script.setAttribute('data-epayco-key', '8e5ffb3ed1a036d10e24cff416208f82');
     buttom_script.setAttribute('class', 'epayco-button');
     buttom_script.setAttribute('data-epayco-amount', '5000');
     buttom_script.setAttribute('data-epayco-tax', '0.00');
