@@ -31,6 +31,7 @@ export class InvitameuncafebuttomComponent implements OnInit{
     buttom_script.setAttribute('data-epayco-response', '');
     buttom_script.setAttribute('data-epayco-confirmation', '');
     buttom_script.setAttribute('data-epayco-button', 'https://ginesrom.es/wp-content/uploads/2021/03/Invitame-a-un-cafe-gines-romero.png');
+    //buttom_script.setAttribute('data-epayco-button', 'invitame un cafe');
 
    const container =this.elRef.nativeElement.querySelector('#epayco-button-container');
    container.appendChild(buttom_script)
