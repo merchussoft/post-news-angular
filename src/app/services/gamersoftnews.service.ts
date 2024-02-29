@@ -23,15 +23,15 @@ export class GamersoftnewsService {
   }
 
   traerDatos() {
-    return this.http.get(this.url_api);
+    return this.http.get(`${this.url_api}/post`);
   }
 
 
   traerPost(cod_news: number): Observable<any> {
-    return this.http.get(`${this.url_api}/detailspost/${cod_news}`);
+    return this.http.get(`${this.url_api}/post/detailspost/${cod_news}`);
   }
 
   subirPost(submitGamerPostNew: {}): Observable<any> {
-    return this.http.post(`${this.url_api}/savenews`, submitGamerPostNew, {headers: {'Access-Control-Allow-Origin': '*'}});
+    return this.http.post(`${this.url_api}/post/savenews`, submitGamerPostNew, {headers: {'Access-Control-Allow-Origin': '*'}});
   }
 }
