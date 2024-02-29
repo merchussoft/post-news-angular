@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
 import { Meta, Title  } from '@angular/platform-browser';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-detailpost',
@@ -19,7 +20,8 @@ export class DetailpostComponent implements OnInit {
     private http: GamersoftnewsService,
     private spinner: NgxSpinnerService,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private location: Location
   ) {
     this.cod_news = this.route.snapshot.paramMap.get('cod_news');
   }
@@ -29,10 +31,14 @@ export class DetailpostComponent implements OnInit {
     this.http.traerPost(Number(this.cod_news))
       .subscribe(response => {
         this.spinner.hide();
-        console.log(response[0]);
+        const currentUrl = this.location.prepareExternalUrl(this.location.path());
+        const origin = window.location.origin;
         let data_response = response[0]
         this.meta.updateTag({ property: 'og:image', content: data_response.url_img});
         this.meta.updateTag({ property: 'og:title', content: data_response.title});
+        this.meta.updateTag({ property: 'og:type', content: 'article'});
+        this.meta.updateTag({ property: 'og:description', content: data_response.description});
+        this.meta.updateTag({ property: 'og:url', content: `${origin}${currentUrl}`});
         this.titleService.setTitle(data_response.title);
         this.data_post_one = response;
       })
