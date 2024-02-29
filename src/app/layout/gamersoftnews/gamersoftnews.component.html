@@ -1,4 +1,4 @@
-<main *ngFor="let gamernews of data_result.data | paginate: paginacionConfig">
+<main *ngFor="let gamernews of data_result | paginate: paginacionConfig">
     <section class="contenedor post-news" [routerLink]="['/detailpost', gamernews.cod_news]">
       <h1 class="titulo">{{gamernews.title}}</h1>
       <div class="contenedor-descriptions">
