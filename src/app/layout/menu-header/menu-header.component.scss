@@ -1,19 +1,30 @@
-header {
-  width: 100%;
+.textos-header {
+  text-align: center;
+  padding: 50px 0;
   background-color: #23764c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-bottom: 30px;
+  color: #ffffff;
 
-  .textos-header{
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
   }
 
-  h1:hover {
-    cursor: pointer;
+  p {
+    font-size: 1.2rem;
   }
 }
+
+.navbar-custom {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #23764c;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: #23764c;
+}
+

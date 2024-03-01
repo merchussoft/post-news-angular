@@ -21,6 +21,7 @@
     "@ckeditor/ckeditor5-angular": "7.0.1",
     "@ckeditor/ckeditor5-build-classic": "41.1.0",
     "@ckeditor/ckeditor5-upload": "41.1.0",
+    "bootstrap": "^5.3.3",
     "font-awesome": "4.7.0",
     "ngx-pagination": "6.0.3",
     "ngx-spinner": "^15.0.1",
