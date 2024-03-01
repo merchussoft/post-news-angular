@@ -39,6 +39,9 @@ export class DetailpostComponent implements OnInit {
         this.meta.updateTag({ property: 'og:type', content: 'article'});
         this.meta.updateTag({ property: 'og:description', content: data_response.description});
         this.meta.updateTag({ property: 'og:url', content: `${origin}${currentUrl}`});
+
+        this.meta.addTag({ rel: 'canonical', href: `${origin}${currentUrl}` });
+
         this.titleService.setTitle(data_response.title);
         this.data_post_one = response;
       })

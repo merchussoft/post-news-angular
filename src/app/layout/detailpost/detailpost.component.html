@@ -2,8 +2,8 @@
 
   <h1 class="titulo-post">{{ post_one.title }}</h1>
   <span class="created-date-post">{{ post_one.created_at | MesAbreviadoPipe}}</span>
-  <div class="description-image">
-    <img src="{{post_one.url_img}}" alt="{{post_one.title}}" *ngIf="post_one.url_img !== null" width="100%" height="400px">
+  <div class="description-image" *ngIf="post_one.url_img !== null">
+    <img src="{{post_one.url_img}}" alt="{{post_one.title}}"  width="100%" height="400px">
   </div>
   <div [innerHTML]="post_one.content"></div>
 
