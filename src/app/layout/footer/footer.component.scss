@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  background-color: #333;
+  background-color: #23764c;
   padding: 20px;
   text-align: center;
   margin-top: 30px;
@@ -32,7 +32,15 @@ footer {
   }
 
   .redes-sociales-footer a:hover {
-    background-color: #000; /* Cambia el color al hacer hover */
+    background-color: #7cbd01; /* Cambia el color al hacer hover */
     transform: scale(1.05);
   }
+}
+
+.btn-invitacion-cafe {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior de la pantalla según tus necesidades */
+  right: 0; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra horizontalmente */
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
 }

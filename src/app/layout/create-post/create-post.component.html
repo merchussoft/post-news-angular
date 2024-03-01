@@ -15,6 +15,11 @@
       </div>
 
       <div class="form-group">
+        <label for="description">Descripcion</label>
+        <input type="file" (change)="onFileChanged($event)" >
+      </div>
+
+      <div class="form-group">
         <label for="content">Contenido:</label>
         <ckeditor [editor]="Editor" [config]="editorConfig"  [(ngModel)]="form_gamerpostnews.content" id="content" name="content"></ckeditor>
       </div>

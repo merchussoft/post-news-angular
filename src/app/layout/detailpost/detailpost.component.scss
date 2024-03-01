@@ -16,18 +16,23 @@
 
   .created-date-post {
     font-size: 12px;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0,0,0,0.3);
     font-weight: bold;
-    margin: 0 0 30px 0;
+    margin: 12px 0 30px 0;
   }
 }
 
 .description-image {
   width: 100%;
+  height: 400px;
   display: flex;
   position: relative;
   flex-direction: column;
   margin-bottom: 30px;
+
+  img {
+    aspect-ratio: 16/9;
+  }
 
   p{
     margin-top: 10px;

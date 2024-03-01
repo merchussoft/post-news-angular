@@ -1,12 +1,14 @@
-<main *ngFor="let gamernews of data_result.data">
-  <a [routerLink]="['/detailpost', gamernews.cod_news]">
-    <section class="contenedor post-news">
-      <h1 class="titulo">{{gamernews.title}}</h1>
+<div [@routerTransition]>
+  <main *ngFor="let gamernews of data_result | paginate: paginacionConfig">
+    <section class="contenedor post-news" [routerLink]="['/detailpost', gamernews.cod_news]">
+      <h1 class="titulo">{{ gamernews.title }}</h1>
       <div class="contenedor-descriptions">
-        <p>{{gamernews.description}}</p>
+        <p>{{ gamernews.description }}</p>
       </div>
-      <span class="created-date">Post news - {{gamernews.created_at}}</span>
+      <span class="created-date">Post news - {{ gamernews.created_at | MesAbreviadoPipe }}</span>
     </section>
-  </a>
-</main>
+  </main>
 
+  <pagination-controls (pageChange)="paginacionConfig.currentPage = $event" previousLabel="anterior"
+                       nextLabel="siguiente"></pagination-controls>
+</div>

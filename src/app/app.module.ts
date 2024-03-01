@@ -19,6 +19,12 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { DetailpostComponent } from './layout/detailpost/detailpost.component';
 import { CreatePostComponent } from './layout/create-post/create-post.component';
 import {FormsModule} from "@angular/forms";
+
+import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
+import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginComponent } from './layout/login/login.component';
+import { InvitameuncafebuttomComponent } from './layout/invitameuncafebuttom/invitameuncafebuttom.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +32,9 @@ import {FormsModule} from "@angular/forms";
     MenuHeaderComponent,
     GamersoftnewsComponent,
     DetailpostComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    LoginComponent,
+    InvitameuncafebuttomComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ import {FormsModule} from "@angular/forms";
     NgxSpinnerModule,
     BrowserAnimationsModule,
     CKEditorModule,
-    FormsModule
+    FormsModule,
+    MesAbreviadoPipe,
+    NgxPaginationModule
   ],
   providers: [
     GamersoftnewsService

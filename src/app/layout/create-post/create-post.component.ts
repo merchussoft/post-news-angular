@@ -15,6 +15,7 @@ import { ImageUpload } from '@ckeditor/ckeditor5-image';
 })
 export class CreatePostComponent {
   public Editor = ClassicEditor;
+  selectedFile: File | undefined;
   public editorConfig = {
     //plugins: [ 'imageUploadPluginFactory' ],
     toolbar: [ 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
@@ -28,7 +29,6 @@ export class CreatePostComponent {
     description:"",
     content: ''
   }
-  content: any;
 
   private imageUploadPluginFactory(editor: any) {
     editor.plugins.get('FileRepository').createUploadAdapter = (loader: any) => {
@@ -36,10 +36,22 @@ export class CreatePostComponent {
     };
   }
 
+  onFileChanged(event: any) {
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile);
+  }
+
   submitGamerPostNews(form: NgForm){
-    console.log(this.form_gamerpostnews);
     this.spinner.show();
-    this.http.subirPost(this.form_gamerpostnews)
+    const form_data = new FormData();
+    form_data.append('title', this.form_gamerpostnews.title);
+    form_data.append('description', this.form_gamerpostnews.description);
+    form_data.append('content', this.form_gamerpostnews.content);
+    // @ts-ignore
+    form_data.append('imagen', this.selectedFile);
+
+    console.log(form_data);
+    this.http.subirPost(form_data)
       .subscribe(response => {
         this.spinner.hide();
         this.form_gamerpostnews = {

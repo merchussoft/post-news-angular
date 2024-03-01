@@ -1,15 +1,30 @@
-header {
-  width: 100%;
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-bottom: 30px;
+.textos-header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #23764c;
+  color: #ffffff;
 
-  .textos-header{
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }
+
+.navbar-custom {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #23764c;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: #23764c;
+}
+
