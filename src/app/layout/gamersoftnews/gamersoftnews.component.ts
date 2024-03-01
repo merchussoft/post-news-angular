@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
 import {PaginationInstance} from "ngx-pagination";
+import {routerTransition, slideToBottom} from '../../router.animations'
 
 @Component({
   selector: 'app-gamersoftnews',
   templateUrl: './gamersoftnews.component.html',
-  styleUrls: ['./gamersoftnews.component.scss']
+  styleUrls: ['./gamersoftnews.component.scss'],
+  animations: [routerTransition()]
 })
 export class GamersoftnewsComponent implements OnInit{
 

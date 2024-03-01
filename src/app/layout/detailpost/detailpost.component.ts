@@ -4,11 +4,13 @@ import {GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
 import { Meta, Title  } from '@angular/platform-browser';
 import { Location } from '@angular/common';
+import {routerTransition, slideToLeft} from '../../router.animations'
 
 @Component({
   selector: 'app-detailpost',
   templateUrl: './detailpost.component.html',
-  styleUrls: ['./detailpost.component.scss']
+  styleUrls: ['./detailpost.component.scss'],
+  animations: [routerTransition()]
 })
 export class DetailpostComponent implements OnInit {
 
