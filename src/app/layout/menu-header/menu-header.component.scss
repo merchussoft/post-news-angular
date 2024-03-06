@@ -1,4 +1,4 @@
-.textos-header {
+/**.textos-header {
   text-align: center;
   padding: 50px 0;
   background-color: #23764c;
@@ -27,4 +27,48 @@
   color: #fff;
   background-color: #23764c;
 }
+*/
 
+
+/* Encabezado */
+header {
+  background-color: #23764c;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navegación */
+nav {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //text-align: center;
+  height: 45px;
+  margin-bottom: 50px;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: #23764c;
+      }
+    }
+
+    li:hover {
+      background-color: #23764c; /* Cambia el color de fondo al hacer hover */
+
+      cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
