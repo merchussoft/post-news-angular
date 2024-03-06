@@ -1,10 +1,10 @@
 <div [@routerTransition] class="container px-4 px-lg-5">
   <main *ngFor="let gamernews of data_result | paginate: paginacionConfig">
     <section class="contenedor post-news" >
-      <h1 class="titulo">{{ gamernews.title }}</h1>
+      <h1 class="titulo" [routerLink]="['/detailpost', gamernews.cod_news]">{{ gamernews.title }}</h1>
       <div class="contenedor-descriptions">
         <p>{{ gamernews.description }}</p>
-        <a style="text-decoration: none;" [routerLink]="['/detailpost', gamernews.cod_news]">leer mas >>></a>
+        <a style="text-decoration: none; cursor: pointer;" [routerLink]="['/detailpost', gamernews.cod_news]" [queryParamsHandling]="'preserve'">leer mas >>></a>
       </div>
       <span class="created-date">Post news - {{ gamernews.created_at | MesAbreviadoPipe }}</span>
     </section>
