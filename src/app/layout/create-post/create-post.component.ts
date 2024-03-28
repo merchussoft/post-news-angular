@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {GamersoftnewsService} from "../../services/gamersoftnews.service";
 import {NgxSpinnerService} from "ngx-spinner";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {MyUploadAdapter} from "../../services/my-upload-adapter";
 import { HttpClient } from '@angular/common/http';
 
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
 
 @Component({
   selector: 'app-create-post',
@@ -14,8 +13,11 @@ import { ImageUpload } from '@ckeditor/ckeditor5-image';
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent {
+
   public Editor = ClassicEditor;
   selectedFile: File | undefined;
+
+
 
   data_categories: any = [];
 
