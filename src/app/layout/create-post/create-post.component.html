@@ -15,13 +15,22 @@
       </div>
 
       <div class="form-group">
-        <label for="description">Descripcion</label>
+        <label for="description">Imagen Principal</label>
         <input type="file" (change)="onFileChanged($event)" >
       </div>
 
       <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <select class="form-control" [(ngModel)]="form_gamerpostnews.cod_categoria" id="categoria" name="categoria">
+          <option value="0">Seleccionar</option>
+          <option *ngFor="let cate of data_categories" value="{{cate.cod_categoria}}">{{cate.categoria}}</option>
+        </select>
+
+      </div>
+
+      <div class="form-group">
         <label for="content">Contenido:</label>
-        <ckeditor [editor]="Editor" [config]="editorConfig"  [(ngModel)]="form_gamerpostnews.content" id="content" name="content"></ckeditor>
+        <ckeditor [editor]="Editor"  [(ngModel)]="form_gamerpostnews.content" id="content" name="content"></ckeditor>
       </div>
       <button type="submit">Guardar Post</button>
     </form>

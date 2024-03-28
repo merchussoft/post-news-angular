@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'detailpost/:cod_news', component: DetailpostComponent},
   {path: 'create_post', component: CreatePostComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'blog/:fecha_news/:cod_news/:title_news', component: DetailpostComponent},
 ];
 
 @NgModule({
