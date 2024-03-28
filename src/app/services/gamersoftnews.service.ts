@@ -34,4 +34,8 @@ export class GamersoftnewsService {
   subirPost(submitGamerPostNew: {}): Observable<any> {
     return this.http.post(`${this.url_api}/post/savenews`, submitGamerPostNew, {headers: {'Access-Control-Allow-Origin': '*'}});
   }
+
+  categories(): Observable<any> {
+    return this.http.get(`${this.url_api}/categories`)
+  }
 }

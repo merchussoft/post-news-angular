@@ -16,18 +16,27 @@ import { ImageUpload } from '@ckeditor/ckeditor5-image';
 export class CreatePostComponent {
   public Editor = ClassicEditor;
   selectedFile: File | undefined;
-  public editorConfig = {
-    //plugins: [ 'imageUploadPluginFactory' ],
-    toolbar: [ 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
-  }
 
-  constructor(private http: GamersoftnewsService, private spinner: NgxSpinnerService, private httpC: HttpClient) {
+  data_categories: any = [];
+
+  constructor(
+    private http: GamersoftnewsService,
+    private spinner: NgxSpinnerService,
+    private httpC: HttpClient) {}
+
+
+  ngOnInit() {
+    this.http.categories().subscribe((response) => {
+      this.data_categories = response;
+    })
+
   }
 
   form_gamerpostnews = {
     title: "",
     description:"",
-    content: ''
+    content: '',
+    cod_categoria: ''
   }
 
   private imageUploadPluginFactory(editor: any) {
@@ -47,6 +56,7 @@ export class CreatePostComponent {
     form_data.append('title', this.form_gamerpostnews.title);
     form_data.append('description', this.form_gamerpostnews.description);
     form_data.append('content', this.form_gamerpostnews.content);
+    form_data.append('cod_categoria', this.form_gamerpostnews.cod_categoria);
     // @ts-ignore
     form_data.append('imagen', this.selectedFile);
 
@@ -57,7 +67,8 @@ export class CreatePostComponent {
         this.form_gamerpostnews = {
           title: "",
           description:"",
-          content: ''
+          content: '',
+          cod_categoria: ''
         }
       })
   }

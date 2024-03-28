@@ -1,19 +1,39 @@
-<div [@routerTransition] class="container px-4 px-lg-5">
-  <main *ngFor="let gamernews of data_result | paginate: paginacionConfig">
-    <section class="contenedor post-news" >
-      <h1 class="titulo" [routerLink]="['/detailpost', gamernews.cod_news]">{{ gamernews.title }}</h1>
-      <div class="contenedor-descriptions">
-        <p>{{ gamernews.description }}</p>
-        <a style="text-decoration: none; cursor: pointer;" [routerLink]="['/detailpost', gamernews.cod_news]" [queryParamsHandling]="'preserve'">leer mas >>></a>
+<div [@routerTransition] class="container">
+
+  <!-- Page content-->
+  <div class="row" style="margin-top: 50px;">
+
+    <!-- Blog entries-->
+    <div class="col-lg-12">
+      <!-- Featured blog post-->
+      <div class="card mb-4">
+        <main *ngFor="let gamernews of data_result | paginate: paginacionConfig">
+          <section class="contenedor post-news">
+            <h1 class="titulo" [routerLink]="['/blog', gamernews.created_at | replaceCaracterSpecial, gamernews.cod_news, gamernews.title | replaceCaracterSpecial | replaceSpaces]">{{ gamernews.title }}</h1>
+            <div class="contenedor-descriptions">
+              <p>{{ gamernews.description }}</p>
+              <a style="text-decoration: none; cursor: pointer;" [routerLink]="['/blog', gamernews.created_at | replaceCaracterSpecial, gamernews.cod_news, gamernews.title | replaceCaracterSpecial | replaceSpaces]"
+                 [queryParamsHandling]="'preserve'">leer mas >>></a>
+            </div>
+            <span class="created-date">{{ gamernews.categoria }} - {{ gamernews.created_at | MesAbreviadoPipe }}</span>
+          </section>
+        </main>
+
+        <div class="paginador_div">
+          <pagination-controls (pageChange)="paginacionConfig.currentPage = $event" previousLabel="anterior"
+                               nextLabel="siguiente"></pagination-controls>
+        </div>
+
       </div>
-      <span class="created-date">Post news - {{ gamernews.created_at | MesAbreviadoPipe }}</span>
-    </section>
-  </main>
+    </div>
 
-  <div class="paginador_div">
-    <pagination-controls (pageChange)="paginacionConfig.currentPage = $event" previousLabel="anterior"
-                         nextLabel="siguiente"></pagination-controls>
+
+    <!-- Side widgets-->
+    <!--
+    <div class="col-lg-4">
+      <app-menu-categorias></app-menu-categorias>
+    </div>
+    -->
+
   </div>
-
-
 </div>

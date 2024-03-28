@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GamersoftnewsService} from "../../services/gamersoftnews.service";
 
 @Component({
   selector: 'app-menu-header',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-header.component.scss']
 })
 export class MenuHeaderComponent {
+
+
+
+  constructor(private http: GamersoftnewsService) {
+  }
+
+
+  ngOnInit(){
+
+  }
 
 }

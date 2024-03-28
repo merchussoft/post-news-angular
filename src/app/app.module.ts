@@ -24,6 +24,9 @@ import {MesAbreviadoPipe} from "./pipes/mes-abreviado-pipe";
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginComponent } from './layout/login/login.component';
 import { InvitameuncafebuttomComponent } from './layout/invitameuncafebuttom/invitameuncafebuttom.component';
+import { MenuCategoriasComponent } from './layout/menu-categorias/menu-categorias.component';
+import { ReplaceSpacesPipe } from './pipes/replace-spaces.pipe';
+import { ReplaceCaracterSpecialPipe } from './pipes/replace-caracter-special.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { InvitameuncafebuttomComponent } from './layout/invitameuncafebuttom/inv
     DetailpostComponent,
     CreatePostComponent,
     LoginComponent,
-    InvitameuncafebuttomComponent
+    InvitameuncafebuttomComponent,
+    MenuCategoriasComponent,
+    ReplaceSpacesPipe,
+    ReplaceCaracterSpecialPipe,
   ],
   imports: [
     BrowserModule,
